@@ -12,7 +12,8 @@ public class Tp1 {
         scanner = new Scanner(System.in);
 
         // Appel de la méthode de l'exercice 1.1
-        exercice1_1();
+        // exercice1_1();
+        exercice1_2();
 
         scanner.close();
     }
@@ -39,7 +40,16 @@ public class Tp1 {
 
     // Méthode de l'exercice n°1.2
     public static void exercice1_2() {
-        // ...
+        System.out.print("Saisissez la valeur de x: ");
+        int x = scanner.nextInt();
+        System.out.print("Saisissez la valeur de y: ");
+        int y = scanner.nextInt();
+
+        int z = y;
+        y = x;
+        x = z;
+
+        System.out.println("Les valeurs sont permutées: x = " + x + " et y = " + y);
     }
 
 }
