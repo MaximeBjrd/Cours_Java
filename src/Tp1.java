@@ -15,7 +15,8 @@ public class Tp1 {
         // exercice1_1();
         // exercice1_2();
         // exercice2_1();
-        exercice2_2();
+        // exercice2_2();
+        exercice3_1();
 
         scanner.close();
     }
@@ -81,6 +82,30 @@ public class Tp1 {
         else {
             System.out.println("L'année " + annee + " n'est pas bissextile.");
         }
+    }
+
+    public static void exercice3_1() {
+        int rand = (int)(Math.random() * 101);
+        int min = rand;
+        int numMin = 0;
+        int max = rand;
+        int numMax = 0;
+
+        for(int i=1; i<=10; i++) {
+            rand = (int)(Math.random() * 101);
+            System.out.println("Le nombre " + i + " vaut: " + rand);
+
+            if(rand < min) {
+                min = rand;
+                numMin = i;
+            }
+            if(rand > max) {
+                max = rand;
+                numMax = i;
+            }
+        }
+
+        System.out.println("Le minimum de ces nombres est " + min + " (numéro " + numMin + ") et le maximum est " + max + " (numéro " + numMax + ").");
     }
 
 }
