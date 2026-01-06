@@ -17,7 +17,8 @@ public class Tp1 {
         // exercice2_1();
         // exercice2_2();
         // exercice3_1();
-        exercice4_1();
+        // exercice4_1();
+        exercice4_2();
 
         scanner.close();
     }
@@ -131,6 +132,34 @@ public class Tp1 {
                 System.out.println("---> Chaud");
             }
         }
+
+        System.out.println("Gagné ! (" + tentatives + " tentatives)");
+    }
+
+    public static void exercice4_2() {
+        int rand = (int)(Math.random() * 101);
+        int nombre;
+        int tentatives = 0;
+
+        System.out.println("Saisissez un nombre entre 0 et 100 :");
+
+        do {
+            nombre = scanner.nextInt();
+            tentatives++;
+
+            int diff = Math.abs(rand - nombre);
+
+            if(diff >= 20) {
+                System.out.println("---> Froid");
+            }
+            else if(diff >= 6) {
+                System.out.println("---> Tiède");
+            }
+            else if(diff >= 1) {
+                System.out.println("---> Chaud");
+            }
+
+        } while(rand != nombre);
 
         System.out.println("Gagné ! (" + tentatives + " tentatives)");
     }
