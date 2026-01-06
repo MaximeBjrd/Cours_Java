@@ -16,7 +16,8 @@ public class Tp1 {
         // exercice1_2();
         // exercice2_1();
         // exercice2_2();
-        exercice3_1();
+        // exercice3_1();
+        exercice4_1();
 
         scanner.close();
     }
@@ -107,5 +108,32 @@ public class Tp1 {
 
         System.out.println("Le minimum de ces nombres est " + min + " (numéro " + numMin + ") et le maximum est " + max + " (numéro " + numMax + ").");
     }
+
+    public static void exercice4_1() {
+        int rand = (int)(Math.random() * 101);
+        int nombre = -1;
+        int tentatives = 0;
+
+        System.out.println("Saisissez un nombre entre 0 et 100:");
+
+        while(rand != nombre) {
+            nombre = scanner.nextInt();
+            tentatives++;
+            int diff = Math.abs(rand-nombre);
+
+            if(diff >= 20) {
+                System.out.println("---> Froid");
+            }
+            else if(diff >= 6) {
+                System.out.println("---> Tiède");
+            }
+            else if(diff >= 1) {
+                System.out.println("---> Chaud");
+            }
+        }
+
+        System.out.println("Gagné ! (" + tentatives + " tentatives)");
+    }
+
 
 }
